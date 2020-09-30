@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>补交资料</title>
+    <link media="all" rel="stylesheet" href="static/css/init.css" type="text/css">
+    <link media="all" rel="stylesheet" href="static/css/index.css" type="text/css">
+</head>
+
+<body>
+    <div class="supplementWrapper">
+        <div>
+            <h2>行驶证照片</h2>
+            <div class="supHead">
+                <div class="supBg">
+                    <input type="file" class="supFile">
+                    <p>行驶证正本</p>
+                </div>
+                <div class="supBg">
+                    <input type="file" class="supFile">
+                    <p>行驶证副本</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>交强险照片</h2>
+            <div class="supHead">
+                <div class="supBg">
+                    <input type="file" class="supFile">
+                    <p>交强险副本</p>
+                </div>
+            </div>
+        </div>
+        <div class="supSubmit">提交</div>
+    </div>
+
+    <script src="./static/js/rem.js"></script>
+    <script src="./static/js/jquery-1.9.1.js"></script>
+    <script src="./static/js/common.js"></script>
+    <script>
+        $(function () {
+            $('.supFile').on('change',function(){
+                console.log($('.supFile').prop('files'));
+                var supBg = $(this).parent();
+                var reader = new FileReader();
+                reader.readAsDataURL(this.files[0]);//发起异步请求
+                reader.onload = function () {
+                    supBg.css('background','url('+ this.result +') no-repeat top').css('backgroundSize','1.12rem 1.12rem');
+                }
+            })
+            $('.supSubmit').on('click',function(){
+                window.location.href = "./confirmOrder.html?status=1"                
+            })
+        })
+    </script>
+</body>
+
+</html>

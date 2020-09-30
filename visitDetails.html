@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>订单详情</title>
+    <link media="all" rel="stylesheet" href="static/css/init.css" type="text/css">
+    <link media="all" rel="stylesheet" href="static/css/index.css" type="text/css">
+</head>
+
+<body>
+    <div class="detailsWrapper clearfix">
+        <div class="linearGra"></div>
+        <h2 class="detailsText">待接单</h2>
+        <h3 class="detailsWaitPay thisHide">请在50分钟内完成支付，超时将会自动取消</h3>
+        <div class="detailHead stationDetails">
+            <h4>上门接车代办</h4>
+            <div class="detailHeadInfo">
+                <p class="inspectionArea"><span>年检地区</span><i>广东省深圳市</i></p>
+                <p class="carNum" id="thisCarNum"><span>车牌号</span><i>粤A B123F</i></p>
+                <p class="addressee"><span>收件人</span><i>王小姐</i></p>
+                <p class="remarks"><span>备注</span><i>备注信息只展示两行，距离左侧文字固定12，超过就换行显示</i></p>
+            </div>
+        </div>
+        <div class="takeCarInfo detailContent">
+            <h4>接车信息</h4>
+            <p class="takeCarMaster statusHide"><span>接车师傅</span><i>陈师傅</i></p>
+            <p class="masterNum statusHide"><span>师傅工号</span><i>4567 0975</i></p>
+            <p class="takeCarTime"><span>接车时间</span><i>2020-01-23 10:30-11:00</i></p>
+            <p class="takeCarAddress"><span>取还车地址</span><i>广东省深圳市宝安区西乡盐田宝安大道4004号旭生大厦21楼</i></p>
+        </div>
+        <div class="detailContent">
+            <h4>订单信息</h4>
+            <p class="orderNum"><span>订单编号</span><i>126793404085757950</i></p>
+            <p class="orderTime"><span>下单时间</span><i>2010-12-23 15:45</i></p>
+            <p class="orderAmount"><span>订单金额</span><i>¥57.00</i></p>
+            <p class="orderDiscount"><span>优惠</span><i>- ¥5.00</i></p>
+            <p class="payAmount"><span>支付金额</span><i> ¥52.00</i></p>
+        </div>
+        <div class="detailBtn">
+            <p class="leftBtn">申请退款</p>
+            <a href="tel:00000000" class="rightBtn">联系师傅</a>
+        </div>
+        <div class="detailBtn1 thisHide">
+            <a href="tel:00000000" class="leftBtn">联系师傅</a>
+            <p class="rightBtn">车辆已归还</p>
+        </div>
+        <div class="bigBtn thisHide">申请退款</div>
+        <a href="tel:00000000" class="bigBtn1 thisHide">联系师傅</a>
+    </div>
+    <script src="./static/js/rem.js"></script>
+    <script src="./static/js/jquery-1.9.1.js"></script>
+    <script src="./static/js/common.js"></script>
+    <script>
+        $(function () {
+            $('.leftBtn').on('click',function(){
+                window.location.href = './visitOrder.html';
+            })
+            var status = getUrlParam('status');
+            if (status == 1) {
+                $('.detailsText').text('待支付');
+                $('.leftBtn').text('取消订单');
+                $('.rightBtn').text('支付 ¥52.00').prop('href','./confirmPay.html');
+                $('.detailsWaitPay').removeClass('thisHide');
+                $('.takeCarInfo').css('height', '1.37rem');
+                $('.statusHide').addClass('thisHide');
+            } else if (status == 2) {
+                $('.detailsText').text('待确认');
+                $('.bigBtn').removeClass('thisHide');
+                $('.detailBtn').addClass('thisHide');
+                $('.takeCarInfo').css('height', '1.37rem');
+                $('.statusHide').addClass('thisHide');
+            } else if (status == 3) {
+                $('.detailsText').text('待派单');
+                $('.bigBtn').removeClass('thisHide');
+                $('.detailBtn').addClass('thisHide');
+                $('.takeCarInfo').css('height', '1.37rem');
+                $('.statusHide').addClass('thisHide');
+            } else if (status == 4) {
+                $('.detailsText').text('待接单');
+                $('.bigBtn').removeClass('thisHide');
+                $('.detailBtn').addClass('thisHide');
+                $('.takeCarInfo').css('height', '1.37rem');
+                $('.statusHide').addClass('thisHide');
+            } else if (status == 5) {
+                $('.detailsText').text('已接单');
+            } else if (status == 6) {
+                $('.detailsText').text('待接车');
+            } else if (status == 7) {
+                $('.detailsText').text('年检中');
+                $('.bigBtn1').removeClass('thisHide');
+                $('.detailBtn').addClass('thisHide');
+            } else if (status == 8) {
+                $('.detailsText').text('待交车');
+                $('.detailBtn1').removeClass('thisHide');
+                $('.detailBtn').addClass('thisHide');
+            } else if (status == 9) {
+                $('.detailsText').text('已完成');
+                $('.detailBtn').addClass('thisHide');
+            } else if (status == 10) {
+                $('.detailsText').text('退款中');
+                $('.detailBtn').addClass('thisHide');
+                $('.detailsWaitPay').removeClass('thisHide').text('钱款将于3个工作日内返还至您的付款账户');
+            } else if (status == 11) {
+                $('.detailsText').text('已退款');
+                $('.detailBtn').addClass('thisHide');
+                $('.detailsWaitPay').removeClass('thisHide').text('钱款已返还至您的付款账户，请注意查收');
+            } else if (status == 12) {
+                $('.detailsText').text('已取消');
+                $('.detailBtn').addClass('thisHide');
+                $('.takeCarInfo').css('height', '1.37rem');
+                $('.statusHide').addClass('thisHide');
+            }
+        })
+    </script>
+</body>
+
+</html>

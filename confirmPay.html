@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>确认订单</title>
+    <link media="all" rel="stylesheet" href="static/css/init.css" type="text/css">
+    <link media="all" rel="stylesheet" href="static/css/index.css" type="text/css">
+    <link media="all" rel="stylesheet" href="static/css/mescroll.min.css" type="text/css">
+</head>
+
+<body>
+    <div class="confirmWrapper">
+        <div class="confWrapper">
+            <div class="conOrderInfo">
+                <p><span>标准洗车券（深圳通用）</span><span>30元</span></p>
+                <p class="seeCouponsInfo"><span>优惠券</span><span class="userUsed">3张可用</span></p>
+                <p><span>订单总价</span><span class="shouldPay">¥ 30.00</span></p>
+            </div>
+            <div class="conPayWays">
+                <h2>选择支付方式</h2>
+                <p><span>微信支付</span><span class="conPayCheck conChecked"></span></p>
+                <p><span>支付宝</span><span class="conPayCheck"></span></p>
+            </div>
+            <a href="./pay.html" class="conPayBtn">立即支付</a>
+        </div>
+        <div class="useCoupons allCheck allCheck1 thisHide">
+            <div class="mescroll" id="mescroll">
+                <h2>优惠券</h2>
+                <ul class="allUseCoupons" id="allUseCoupons">
+                    <!-- <li class="useCoupon">
+                    <span><em>¥</em>5</span><span>
+                        <p>洗车优惠券</p>
+                        <p>仅限洗车可用，新人大礼包优惠券</p>
+                        <p>2019.06.05-2019.07.06</p>
+                    </span><span><em class=" conPayCheck"></em></span>
+                </li> -->
+                </ul>
+                <div class="noUse "><span>不使用优惠券</span><span class="noUsed allChecked"></span></div>
+            </div>
+        </div>
+        <div class="bgGray allCheck allCheck1 thisHide"></div>
+    </div>
+    <script src="./static/js/rem.js"></script>
+    <script src="./static/js/jquery-1.9.1.js"></script>
+    <script src="./static/js/mescroll.min.js"></script>
+    <script src="./static/js/common.js"></script>
+    <script>
+        $(function () {
+            $('.bgGray').on('click', function () {
+                $(this).addClass('thisHide');
+                $('.useCoupons').addClass('thisHide');
+            })
+            $('.mescroll h2').on('click', function () {
+                $('.allCheck').addClass('thisHide');
+            })
+            $('.seeCouponsInfo').on('click', function () {
+                $('.allCheck1').removeClass('thisHide');
+            })
+
+            $('.conPayWays p').on('click', function () {
+                console.log($(this))
+                $('.conPayWays .conPayCheck').removeClass('conChecked');
+                $(this).children('.conPayCheck').addClass('conChecked');
+            })
+            $('.allUseCoupons').on('click', '.useCoupon ', function () {
+                console.log($(this).children())
+                let num;
+                $('.allChecked').removeClass('conChecked');
+                $(this).find('.allChecked').addClass('conChecked');
+                $('.allCheck').addClass('thisHide');
+                $('.userUsed').text('-¥ 5.00');
+                num = 30 - $('.userUsed').text().replace(/[^\d\.]/g, '');
+                $('.shouldPay').text('¥ ' + num + '.00');
+            })
+            $('.noUse').on('click', function () {
+                $('.allChecked').removeClass('conChecked');
+                $(this).find('.noUsed').addClass('conChecked');
+                $('.allCheck').addClass('thisHide');
+                $('.userUsed').text('3张可用');
+                $('.shouldPay').text('¥ ' + 30 + '.00');
+            })
+
+            function setListData(listData) {
+                var listDom = document.getElementById("allUseCoupons");
+                for (var i = 0; i < listData.length; i++) {
+                    var pd = listData[i].money;
+                    var str = `
+                    <span><em>¥</em>`+ pd + `</span><span>
+                    `;
+                    str += `
+                        <p>洗车优惠券</p>
+                        <p>仅限洗车可用，新人大礼包优惠券</p>
+                        <p>2019.06.05-2019.07.06</p>
+                    </span><span><em class=" conPayCheck allChecked"></em></span>
+                   `;
+                    var liDom = document.createElement("li");
+                    liDom.className = 'useCoupon '
+                    liDom.innerHTML = str;
+                    listDom.appendChild(liDom);
+                }
+            }
+            $.ajax({
+                type: 'GET',
+                url: './static/json/useCoupons.json',
+                //		                url: '../res/pdlist1.json?num='+pageNum+"&size="+pageSize,
+                dataType: 'json',
+                success: function (data) {
+                    //模拟分页数据
+                    var listData = [];
+                    for (var i = 0; i < data.length; i++) {
+                        listData.push(data[i]);
+                        setListData(listData);
+                    }
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>

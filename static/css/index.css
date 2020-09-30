@@ -1,0 +1,2512 @@
+/* login style */
+
+.lgWrapper {
+    width: 3.15rem;
+    padding: 0 0.3rem;
+    margin: 0 auto;
+}
+
+.lgWrapper .welcome {
+    padding-top: 0.6rem;
+}
+
+.lgWrapper .welcome h1 {
+    font-size: 0.24rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+}
+
+.lgWrapper .logInfo {
+    padding-top: 0.43rem;
+}
+
+.lgWrapper .logInfo p {
+    height: 0.37rem;
+    line-height: 0.37rem;
+    padding: 0.08rem 0;
+    border-bottom: 1px solid #DFE2E6;
+}
+
+.lgWrapper .logInfo p input {
+    width: 2.3rem;
+    font-size: 0.15rem;
+}
+
+.lgWrapper .logInfo p:nth-of-type(2) span {
+    font-size: 0.15rem;
+    float: right;
+    color: rgba(39, 130, 244, 1);
+}
+
+.lgWrapper .lgSuccess {
+    width: 1.8rem;
+    height: 1.2rem;
+    background: rgba(75, 75, 75, 1);
+    border-radius: 0.16rem;
+    margin: 0 0.675rem;
+}
+
+.lgWrapper .lgSuccess::before {
+    content: '';
+    display: table;
+}
+
+.lgWrapper .lgSuccess .successImg {
+    width: 0.46rem;
+    height: 0.46rem;
+    margin-left: 0.66rem;
+    margin-top: 0.23rem;
+    border: 1px solid transparent;
+    background: url('../img/toast_icon_successful@2x.png') no-repeat;
+    background-size: 0.46rem 0.46rem;
+}
+
+.lgWrapper .lgSuccess .successText {
+    font-size: 0.15rem;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 0.08rem;
+    color: rgba(255, 255, 255, 1);
+}
+
+.lgWrapper .login {
+    margin-top: 0.41rem;
+}
+
+.lgWrapper .login input {
+    width: 3.15rem;
+    height: 0.45rem;
+    background: rgba(39, 130, 244, 1);
+    border-radius: 0.25rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    font-size: 0.18rem;
+    opacity: 0.5;
+}
+
+.lgWrapper .lgBottom {
+    position: fixed;
+    bottom: 0;
+    width: 2.03rem;
+    height: 0.17rem;
+    line-height: 0.17rem;
+    padding: 0 0.56rem;
+    font-size: 0.12rem;
+    color: #9FA6AE;
+}
+
+.lgWrapper .lgBottom em {
+    color: #2782F4;
+}
+
+
+/* index style */
+
+.inspection-Wrapper {
+    height: 100%;
+    width: 3.75rem;
+    z-index: 1;
+    background: rgba(247, 247, 247, 1);
+    position: relative;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.inspection-Wrapper .insHead {
+    z-index: 1;
+    width: 100%;
+    height: 1.8rem;
+    background: url('../img/home_img_banner@2x.png') no-repeat;
+    background-size: 3.75rem 1.8rem;
+}
+
+
+
+.insQuestions {
+    z-index: 2;
+    display: block;
+    position: absolute;
+    top: 0.08rem;
+    right: 0;
+    width: 0.72rem;
+    height: 0.22rem;
+    line-height: 0.22rem;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 1rem 0px 0px 1rem;
+    font-size: 0.12rem;
+    color: #fff;
+}
+
+.insQuestions span {
+    font-size: 0.12rem;
+    display: inline-block;
+    width: 0.12rem;
+    height: 0.12rem;
+    line-height: 0.12rem;
+    text-align: center;
+    margin-left: 0.06rem;
+    margin-right: 0.01rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.ins_second_wrapper {
+    position: absolute;
+    top: 1.3rem;
+    z-index: 3;
+}
+
+.addCar {
+    z-index: 2;
+    width: 3.43rem;
+    height: 1.71rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0.08rem;
+    margin: 0 0.16rem;
+}
+
+.addCar::before {
+    content: '';
+    display: table;
+}
+
+.addCar .addCarImg {
+    display: block;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin: 0.2rem 1.315rem 0 1.315rem;
+    background: url('../img/home_icon_add@2x.png') no-repeat;
+    background-size: 0.8rem 0.8rem;
+}
+
+.addCar .addCarImgExplain {
+    width: 1rem;
+    height: 0.22rem;
+    font-size: 0.16rem;
+    font-weight: 500;
+    text-align: center;
+    color: rgba(8, 16, 26, 1);
+    padding: 0.08rem 1.233rem 0 1.233rem;
+
+}
+
+.addCar .addCarText {
+    width: 2.04rem;
+    height: 0.17rem;
+    font-size: 0.12rem;
+    font-weight: 400;
+    padding: 0.04rem 0.695rem 0 0.695rem;
+    color: rgba(159, 166, 174, 1);
+}
+
+.alreadyAddCar {
+    z-index: 2;
+    width: 3.43rem;
+    height: 3.65rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0.08rem;
+    margin: 0 0.16rem;
+}
+
+.alreadyAddCar .alreadyHead {
+    width: 3.19rem;
+    height: 0.77rem;
+    padding: 0 0.12rem;
+    background: rgba(244, 249, 254, 1);
+    border-bottom: 1px solid rgba(223, 226, 230, 1);
+    border-radius: 0.08rem 0.08rem 0px 0px;
+    display: flex;
+}
+
+.alreadyAddCar .alreadyHead .alHeadInfo {
+    display: inline-block;
+    width: 1.6rem;
+    height: 0.77rem;
+}
+
+.alreadyAddCar .alreadyHead .alHeadInfo p:nth-of-type(1) {
+    width: 1.6rem;
+    height: 0.25rem;
+    padding: 0.16rem 0 0.04rem;
+    font-size: 0.18rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+}
+
+.alreadyAddCar .alreadyHead .alHeadInfo em {
+    position: absolute;
+    top: 0.2rem;
+    left: 1.14rem;
+    display: inline-block;
+    width: 0.16rem;
+    height: 0.16rem;
+    background: url('../img/community_icon_release@2x.png') no-repeat center;
+    background-size: 0.16rem 0.16rem;
+    margin-left: 0.08rem;
+}
+
+.alreadyAddCar .alreadyHead .alHeadInfo p:nth-of-type(2) {
+    width: 1.6rem;
+    height: 0.17rem;
+    padding-bottom: 0.16rem;
+    font-size: 0.12rem;
+    font-weight: 400;
+    color: rgba(159, 166, 174, 1);
+}
+
+.alreadyAddCar .alreadyHead .changeCar {
+    display: inline-block;
+    width: 0.22rem;
+    height: 0.22rem;
+    margin: 0.28rem 0 0.28rem 1.37rem;
+    background: url('../img/home_icon_switch@2x.png') no-repeat center;
+    background-size: 0.22rem 0.22rem;
+}
+
+.alreadyAddCar .alredyContent {
+    height: 2.87rem;
+}
+
+.alreadyAddCar .alredyContent .handleCity {
+    height: 0.22rem;
+    line-height: 0.22rem;
+    padding-left: 0.12rem;
+    margin-top: 0.09rem;
+    width: 3.31rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.alreadyAddCar .alredyContent .handleCity .chooseCity {
+    font-size: 0.14rem;
+    font-weight: 400;
+    color: rgba(8, 16, 26, 1);
+    background: url('../img/city_icon_down@2x.png') no-repeat right;
+    background-size: 0.16rem 0.16rem;
+    padding-right: 0.2rem;
+}
+
+.alreadyAddCar .alredyContent .handleCity .freeOnline {
+    width: 0.52rem;
+    height: 0.22rem;
+    line-height: 0.22rem;
+    padding-left: 0.04rem;
+    text-align: center;
+    background: rgba(39, 130, 244, 1);
+    border-radius: 1rem 0px 0px 1rem;
+    font-size: 0.12rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+}
+
+.alreadyAddCar .alredyContent .dateTitle {
+    width: 2.36rem;
+    height: 0.2rem;
+    padding: 0.18rem 0.535rem 0.12rem 0.535rem;
+    font-size: 0.14rem;
+    font-weight: 400;
+    color: rgba(159, 166, 174, 1);
+}
+
+.alreadyAddCar .alredyContent .alreadyDate {
+    width: 1.4rem;
+    margin: 0 1.075rem 0.2rem 1.075rem;
+    height: 0.76rem;
+    display: flex;
+}
+
+.alreadyAddCar .alredyContent .alreadyDate span {
+    display: inline-block;
+    width: 0.54rem;
+    height: 0.76rem;
+    line-height: 0.76rem;
+    text-align: center;
+    font-size: 0.6rem;
+    font-weight: bold;
+    color: rgba(8, 16, 26, 1);
+    margin-right: 0.04rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0.04rem;
+    border: 1px solid rgba(39, 130, 244, 0.1);
+    background: url('../img/home_img_calendar@2x.png') no-repeat center;
+    background-size: 0.54rem 0.76rem;
+}
+
+.alreadyAddCar .alredyContent .alreadyDate em {
+    width: 0.14rem;
+    height: 0.2rem;
+    padding: 0.58rem 0 0 0.04rem;
+    font-size: 0.14rem;
+    font-weight: 400;
+    color: rgba(159, 166, 174, 1);
+    line-height: 0.2rem;
+}
+
+.alreadyAddCar .alredyContent .immediatelyHandle {
+    display: block;
+    width: 3.19rem;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    text-align: center;
+    margin: 0 0.12rem 0.2rem;
+    background: rgba(39, 130, 244, 1);
+    border-radius: 0.22rem;
+    font-size: 0.16rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+
+.alreadyAddCar .alredyContent .alreadyHandle {
+    display: block;
+    width: 3.19rem;
+    height: 0.22rem;
+    padding: 0 0.12rem 0.2rem;
+    text-align: center;
+    font-size: 0.16rem;
+    font-weight: 500;
+    color: rgba(39, 130, 244, 1);
+}
+
+
+
+
+
+
+
+
+.inspection-Wrapper .insMenu {
+    width: 3.43rem;
+    height: 0.5rem;
+    z-index: 2;
+    line-height: 0.5rem;
+    margin: 0.16rem;
+    border-radius: 0.08rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inspection-Wrapper .insMenu .insMenu-coupons {
+    display: inline-block;
+    margin-left: 0.32rem;
+    width: 1.03rem;
+    height: 0.2rem;
+    line-height: 0.2rem;
+    text-align: right;
+    background: url('../img/home_icon_coupons@2x.png') no-repeat left;
+    background-size: 0.2rem 0.2rem;
+    font-size: 0.16rem;
+    color: rgba(8, 16, 26, 1);
+}
+
+.inspection-Wrapper .insMenu .insMenu-line {
+    display: inline-block;
+    width: 1px;
+    height: 0.2rem;
+    margin: 0.15rem 0;
+    background: rgba(223, 226, 230, 1);
+
+}
+
+.inspection-Wrapper .insMenu .insMenu-orders {
+    display: inline-block;
+    margin-right: 0.5rem;
+    width: 0.87rem;
+    height: 0.2rem;
+    line-height: 0.2rem;
+    text-align: right;
+    background: url('../img/home_icon_order@2x.png') no-repeat left;
+    background-size: 0.2rem 0.2rem;
+    font-size: 0.16rem;
+    color: rgba(8, 16, 26, 1);
+}
+
+.inspection-Wrapper .insContent {
+    width: 3.43rem;
+    z-index: 2;
+    height: 100%;
+    margin: 0.08rem 0.16rem;
+    background: #fff;
+    border-radius: 0.08rem;
+}
+
+.inspection-Wrapper .insContent .insType {
+    height: 0.5rem;
+    display: flex;
+    line-height: 0.5rem;
+    font-size: 0.16rem;
+    font-weight: 500;
+    position: relative;
+    border-radius: 0.08rem 0.08rem 0px 0px;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.inspection-Wrapper .insContent .insType .row {
+    text-align: center;
+    background: #f2f2f2;
+}
+
+.inspection-Wrapper .insContent .insType .row span {
+    position: relative;
+    z-index: 3;
+}
+
+
+.inspection-Wrapper .insContent .insType .typeOne {
+    width: 1.14rem;
+    height: 0.5rem;
+    border-radius: 0.08rem 0 0px 0px;
+    color: #000;
+}
+
+.inspection-Wrapper .insContent .insType .typeTwo {
+    width: 1.15rem;
+    height: 0.5rem;
+}
+
+.cur {
+    width: 1.33rem;
+    height: 0.5rem;
+    background: url('../img/bg_classification_middle_sel@2x.png') no-repeat 0 0 !important;
+    background-size: 100% 100% !important;
+    position: absolute;
+    left: -0.13rem;
+    z-index: 1;
+    transition: all .3s;
+}
+
+.cur2 {
+    left: 1.04rem !important;
+}
+
+.cur3 {
+    left: 2.18rem !important;
+}
+
+
+.inspection-Wrapper .insContent .insType .typeThree {
+    width: 1.14rem;
+    height: 0.5rem;
+    border-radius: 0 0.08rem 0px 0px;
+}
+
+
+
+
+.inspection-Wrapper .alreadyHandleRemind {
+    position: fixed;
+    top: 2.4rem;
+    left: 0.425rem;
+    width: 2.9rem;
+    height: 1.96rem;
+    background: url('../img/accRemind.png') no-repeat;
+    background-size: 2.9rem 1.96rem;
+    border-radius: 0.12rem;
+    z-index: 4;
+}
+
+.inspection-Wrapper .insContent::after {
+    display: table;
+    content: "";
+}
+
+.inspection-Wrapper .explainContentPic {
+    width: 3.19rem;
+    height: 10.9rem;
+    margin: 0.16rem 0.12rem;
+    background: url('../img/home_img_2@2x.png') no-repeat center;
+    background-size: 3.19rem 10.9rem;
+}
+
+.grayBg {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 3;
+}
+
+
+.inspection-Wrapper .chooseAnotherCar {
+    position: fixed;
+    bottom: 0;
+    width: 3.75rem;
+    height: 3.46rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0.16rem 0.16rem 0px 0px;
+    z-index: 4;
+}
+
+.inspection-Wrapper .chooseAnotherCar .allCars {
+    overflow: auto;
+    height: 2.2rem;
+}
+
+.inspection-Wrapper .chooseAnotherCar h2 {
+    width: 3.43rem;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    margin-left: 0.16rem;
+    margin-bottom: 0.12rem;
+    padding-right: 0.16rem;
+    font-size: 0.16rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+    border-bottom: 1px solid rgba(223, 226, 230, 1);
+}
+
+.inspection-Wrapper .chooseAnotherCar h2 em {
+    float: right;
+    color: rgba(159, 166, 174, 1);
+}
+
+.allCars .cars {
+    width: 3.43rem;
+    margin: 0 0.16rem 0.08rem;
+    height: 0.78rem;
+    background: rgba(248, 251, 255, 1);
+    border-radius: 0.04rem;
+    border: 1px solid rgba(223, 226, 230, 1);
+    position: relative;
+}
+
+.allCars .cars p:nth-of-type(1) {
+    font-size: 0.16rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+    padding-top: 0.16rem;
+    padding-left: 0.12rem;
+}
+
+.allCars .cars p:nth-of-type(1) em {
+    color: rgba(159, 166, 174, 1);
+    padding-left: 0.12rem;
+}
+
+.allCars .cars p:nth-of-type(2) {
+    font-size: 0.16rem;
+    font-weight: 500;
+    color: rgba(159, 166, 174, 1);
+    padding-top: 0.04rem;
+    padding-left: 0.12rem;
+}
+
+.allCars .cars .carsChoose {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.12rem;
+    display: block;
+    width: 0.2rem;
+    height: 0.2rem;
+    background: url('../img/icon_box_nor@2x.png') no-repeat center;
+    background-size: 0.2rem 0.2rem;
+}
+
+.carsChecked {
+    background: url('../img/home_icon_box_sel@2x.png') no-repeat center !important;
+    background-size: 0.2rem 0.2rem !important;
+}
+
+.chooseAnotherCar .mescroll {
+    height: 2.5rem;
+}
+
+.chooseNewCar {
+    position: fixed;
+    bottom: 0rem;
+    width: 3.43rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    margin: 0 0.16rem 0.08rem;
+    background: rgba(39, 130, 244, 1);
+    border-radius: 0.25rem;
+    font-size: 0.18rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+
+
+
+/* eidtCar style */
+
+.editWrapper {
+    position: relative;
+    width: 3.75rem;
+    margin: 0 auto;
+    background: rgba(248, 251, 255, 1);
+    height: 100%;
+}
+
+.editWrapper::before {
+    content: '';
+    display: table;
+}
+
+.editWrapper .carInfo {
+    width: 3.43rem;
+    height: 3.19rem;
+    margin: 0.08rem 0.16rem;
+    border-radius: 0.08rem;
+    background: #fff;
+}
+
+.editWrapper .carInfo p {
+    margin-left: 0.12rem;
+    font-size: 0.15rem;
+    width: 3.31rem;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    border-top: 1px solid rgba(223, 226, 230, 1);
+    font-weight: 400;
+    color: rgba(8, 16, 26, 1);
+}
+
+.editWrapper .carInfo p input {
+    font-size: 0.15rem;
+    font-weight: 400;
+    color: rgba(8, 16, 26, 1);
+}
+
+.editWrapper .carInfo p span:nth-of-type(1) {
+    display: inline-block;
+    width: 0.84rem;
+}
+
+.editWrapper .carInfo h2 {
+    margin-left: 0.12rem;
+    width: 3.31rem;
+    height: 0.48rem;
+    line-height: 0.48rem;
+    font-size: 0.14rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+}
+
+.editWrapper .carInfo .carNum .localAbbreviation {
+    display: inline-block;
+    width: 0.32rem;
+    height: 0.24rem;
+    line-height: 0.24rem;
+    background: url('../img/editor_img_arrow@2x.png') no-repeat center;
+    background-size: 0.32rem 0.24rem;
+    padding-left: 0.04rem;
+    margin-right: 0.08rem;
+    color: #fff;
+}
+
+.editWrapper .carInfo .engineNum i,
+.frameNum i {
+    display: inline-block;
+    width: 0.18rem;
+    height: 0.18rem;
+    margin: 0.14rem 0 0.14rem 0.25rem;
+    background: url('../img/editor_icon_doubt@2x.png') no-repeat center;
+    background-size: 0.18rem 0.18rem;
+    vertical-align: middle;
+}
+
+.editWrapper .carInfo .carType,
+.seatsNum,
+.carRegistrationDate {
+    background: url('../img/editor_icon_next@2x.png') no-repeat 3rem;
+    background-size: 0.14rem 0.14rem;
+}
+
+.editWrapper .accidentCasualties {
+    width: 3.43rem;
+    height: 1.4rem;
+    margin: 0 0.16rem;
+    background: #fff;
+    border-radius: 0.08rem;
+}
+
+.editWrapper .accidentCasualties h2 {
+    margin-left: 0.12rem;
+    width: 3.31rem;
+    height: 0.48rem;
+    line-height: 0.48rem;
+    font-size: 0.14rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+}
+
+.editWrapper .accidentCasualties p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0.12rem;
+    font-size: 0.15rem;
+    width: 3.31rem;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    border-top: 1px solid rgba(223, 226, 230, 1);
+    font-weight: 400;
+    color: rgba(8, 16, 26, 1);
+}
+
+.editWrapper .accidentCasualties p .accChecks {
+    display: inline-block;
+    width: 0.2rem;
+    height: 0.2rem;
+    margin-right: 0.1rem;
+    background: url('../img/icon_box_nor@2x.png') no-repeat;
+    background-size: 0.2rem 0.2rem;
+}
+
+.accChecked {
+    background: url('../img/home_icon_box_sel@2x.png') no-repeat !important;
+    background-size: 0.2rem 0.2rem !important;
+}
+
+.editWrapper .editBtn div {
+    width: 3.43rem;
+    margin: 0 0.16rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    font-size: 0.18rem;
+    font-weight: 500;
+}
+
+.editWrapper .editBtn .saveBtn {
+    background: rgba(39, 130, 244, 1);
+    color: rgba(255, 255, 255, 1);
+    margin-top: 0.4rem;
+    opacity: 0.4;
+}
+
+.editWrapper .editBtn .removeBtn {
+    background: rgba(255, 255, 255, 1);
+    color: rgba(255, 0, 0, 1);
+    margin-top: 0.14rem;
+}
+
+.editWrapper .chooseAbbreviation {
+    position: fixed;
+    bottom: 0;
+    width: 3.75rem;
+    height: 3.46rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0.16rem 0.16rem 0px 0px;
+    z-index: 99;
+}
+
+.editWrapper .chooseAbbreviation h2 {
+    width: 3.43rem;
+    margin-left: 0.16rem;
+    margin-right: 0.16rem;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    font-size: 0.16rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+    border-bottom: 1px solid rgba(223, 226, 230, 1);
+}
+
+.editWrapper .chooseAbbreviation .abbContent {
+    width: 3.43rem;
+    margin: 0 0.16rem;
+}
+
+.editWrapper .chooseAbbreviation .abbContent span {
+    display: inline-block;
+    width: 0.4rem;
+    height: 0.4rem;
+    line-height: 0.42rem;
+    margin-top: 0.12rem;
+    margin-right: 0.08rem;
+    text-align: center;
+    background: rgba(248, 251, 255, 1);
+    border-radius: 0.04rem;
+    border: 1px solid rgba(223, 226, 230, 1);
+    font-size: 0.18rem;
+    font-weight: 400;
+    color: rgba(8, 16, 26, 1);
+}
+
+.thisMarginZero {
+    margin: 0 !important;
+}
+
+.abbChecked {
+    background: rgba(39, 130, 244, 1) !important;
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+.editWrapper .chooseCarType {
+    position: fixed;
+    bottom: 0;
+    width: 3.75rem;
+    height: 3.46rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0.16rem 0.16rem 0px 0px;
+    z-index: 99;
+}
+
+.editWrapper .chooseCarType .carTypeHead {
+    width: 3.43rem;
+    padding: 0 0.16rem;
+    height: 0.49rem;
+    border-bottom: 1px solid rgba(223, 226, 230, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.editWrapper .chooseCarType .carTypeHead span:nth-of-type(1) {
+    font-size: 0.16rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+}
+
+.editWrapper .chooseCarType .carTypeHead span:nth-of-type(2) {
+    font-size: 0.15rem;
+    font-weight: 400;
+    color: rgba(159, 166, 174, 1);
+}
+
+.editWrapper .chooseCarType .carTypeHead .carTypeBtn i {
+    padding-left: 0.24rem;
+    color: rgba(39, 130, 244, 1);
+}
+
+.editWrapper .chooseCarType .carTypeContent p {
+    height: 0.49rem;
+    line-height: 0.49rem;
+    border-bottom: 1px solid rgba(223, 226, 230, 1);
+    margin-left: 0.16rem;
+    padding-right: 0.16rem;
+    font-size: 0.15rem;
+    font-weight: 400;
+    color: rgba(8, 16, 26, 1);
+}
+
+.carTypeChecked,
+.seatsNumChecked {
+    background: url('../img/editor_icon_true@2x.png') no-repeat 3.21rem;
+    background-size: 0.22rem 0.22rem;
+}
+
+.editWrapper .chooseSeatsNum {
+    position: fixed;
+    bottom: 0;
+    width: 3.75rem;
+    height: 3.46rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0.16rem 0.16rem 0px 0px;
+    z-index: 99;
+}
+
+.editWrapper .chooseSeatsNum .seatsNumHead {
+    width: 3.43rem;
+    padding: 0 0.16rem;
+    height: 0.49rem;
+    border-bottom: 1px solid rgba(223, 226, 230, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.editWrapper .chooseSeatsNum .seatsNumHead span:nth-of-type(1) {
+    font-size: 0.16rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+}
+
+.editWrapper .chooseSeatsNum .seatsNumHead span:nth-of-type(2) {
+    font-size: 0.15rem;
+    font-weight: 400;
+    color: rgba(159, 166, 174, 1);
+}
+
+.editWrapper .chooseSeatsNum .seatsNumHead .seatsNumBtn i {
+    padding-left: 0.24rem;
+    color: rgba(39, 130, 244, 1);
+}
+
+.editWrapper .chooseSeatsNum .seatsNumContent p {
+    height: 0.49rem;
+    line-height: 0.49rem;
+    border-bottom: 1px solid rgba(223, 226, 230, 1);
+    margin-left: 0.16rem;
+    padding-right: 0.16rem;
+    font-size: 0.15rem;
+    font-weight: 400;
+    color: rgba(8, 16, 26, 1);
+}
+
+.editWrapper .carNumAndEngineNumInfo {
+    position: fixed;
+    top: 2.64rem;
+    left: 0.43rem;
+    width: 2.9rem;
+    height: 2.85rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0.12rem;
+}
+
+.editWrapper .carNumAndEngineNumInfo div {
+    width: 2.9rem;
+    height: 2rem;
+    background: url('../img/editor_img_car@2x.png') no-repeat center;
+    background-size: 2.9rem 2rem;
+}
+
+.editWrapper .carNumAndEngineNumInfo p {
+    width: 2.58rem;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    text-align: center;
+    margin: 0.2rem 0.16rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    font-size: 0.18rem;
+    background: rgba(39, 130, 244, 1);
+    border-radius: 0.22rem;
+}
+
+.editWrapper .accRemind {
+    position: fixed;
+    top: 2.6rem;
+    left: 0.43rem;
+    width: 2.9rem;
+    height: 1.72rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0.12rem;
+    background: url('../img/dangerRemind.png') no-repeat;
+    background-size: 2.9rem 1.72rem;
+}
+
+.editWrapper .removeRemind {
+    display: flex;
+    position: fixed;
+    top: 2.6rem;
+    left: 0.43rem;
+    width: 2.9rem;
+    height: 1.72rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0.12rem;
+    background: url('../img/removeRemind.png') no-repeat;
+    background-size: 2.9rem 1.72rem;
+}
+
+.removeRemind div {
+    position: absolute;
+    bottom: 0.2rem;
+    width: 1.25rem;
+    height: 0.4rem;
+    z-index: 3;
+}
+
+.removeRemind .leftCancleBtn {
+    margin-left: 0.16rem;
+}
+
+.removeRemind .rightConfirmBtn {
+    margin-right: 0.16rem;
+    right: 0;
+}
+
+.alreadyHandleRemind div {
+    position: absolute;
+    bottom: 0.2rem;
+    width: 1.25rem;
+    height: 0.4rem;
+    z-index: 3;
+}
+
+.alreadyHandleRemind .leftCancleBtn {
+    margin-left: 0.16rem;
+}
+
+.alreadyHandleRemind .rightConfirmBtn {
+    margin-right: 0.16rem;
+    right: 0;
+}
+
+/* commonProblem style */
+
+.proWrapper {
+    width: 3.75rem;
+    margin: 0 auto;
+    height: auto;
+}
+
+.proWrapper .problems {
+    width: 3.63rem;
+    margin-left: 0.12rem;
+    height: auto;
+    border-bottom: 1px solid rgba(223, 226, 230, 1);
+}
+
+.proWrapper .problems .questions {
+    width: 3.42rem;
+    height: 0.16rem;
+    line-height: 0.16rem;
+    padding-left: 0.21rem;
+    margin-top: 0.1rem;
+    background: url('../img/quession_img_q@2x.png') no-repeat left;
+    background-size: 0.16rem 0.16rem;
+    font-size: 0.14rem;
+    font-weight: 400;
+    color: rgba(8, 16, 26, 1);
+}
+
+
+.proWrapper .problems .answers {
+    display: inline-block;
+    width: 3.3rem;
+    padding-left: 0.21rem;
+    padding-right: 0.12rem;
+    padding-bottom: 0.1rem;
+    margin-top: 0.1rem;
+    height: auto;
+    line-height: 0.16rem;
+    background: url('../img/quession_img_a@2x.png') no-repeat;
+    background-size: 0.16rem 0.16rem;
+    font-size: 0.14rem;
+    font-weight: 400;
+    color: rgba(159, 166, 174, 1);
+}
+
+.proWrapper .problems:nth-last-of-type(1) {
+    border: none;
+}
+
+.proWrapper .telBtn {
+    display: inline-block;
+    width: 3.43rem;
+    height: 0.44rem;
+    line-height: 0.44rem;
+    text-align: center;
+    margin: 0.2rem 0.16rem;
+    background: rgba(39, 130, 244, 1);
+    border-radius: 0.22rem;
+    font-size: 0.15rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+
+
+/* order style */
+
+.orderWrapper {
+    width: 3.75rem;
+    height: 100%;
+    margin: 0 auto;
+    background: rgba(248, 251, 255, 1);
+}
+
+.orderWrapper .allOrders .orders {
+    display: block;
+    width: 3.43rem;
+    height: auto;
+    margin: 0.08rem 0.16rem 0 0.16rem;
+    background: #fff;
+    border-radius: 0.08rem;
+}
+
+.orderWrapper .allOrders .orders .orderHead {
+    width: 3.19rem;
+    height: 0.38rem;
+    margin-left: 0.12rem;
+    padding-right: 0.12rem;
+    border-bottom: 1px solid rgba(223, 226, 230, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.orderWrapper .allOrders .orders .orderHead span:nth-of-type(1) {
+    display: inline-block;
+    width: 1rem;
+    height: 0.2rem;
+    background: url('../img/order_icon_check@2x.png') no-repeat left;
+    background-size: 0.2rem 0.2rem;
+    padding-left: 0.24rem;
+    font-size: 0.16rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+}
+
+.orderWrapper .allOrders .orders .orderHead .orderStatus {
+    font-size: 0.14rem;
+    font-weight: 400;
+    color: rgba(159, 166, 174, 1);
+}
+
+.orderWrapper .allOrders .orders .orderInfo {
+    width: 3.19rem;
+    height: 0.22rem;
+    line-height: 0.22rem;
+    padding: 0 0.12rem;
+    padding-top: 0.08rem;
+    font-size: 0.14rem;
+    font-weight: 400;
+    color: rgba(8, 16, 26, 1);
+}
+
+.orderWrapper .allOrders .orders .orderInfo em {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.2rem;
+    padding: 0.01rem 0;
+    font-size: 0.14rem;
+    font-weight: 400;
+    color: rgba(159, 166, 174, 1);
+}
+
+.orderWrapper .allOrders .orders .oCarNum {
+    padding-top: 0.12rem;
+}
+
+.orderWrapper .allOrders .orders .totalPrice {
+    padding-top: 0.08rem;
+    padding-bottom: 0.12rem;
+}
+
+.orderWrapper .allOrders .orders .orderBtn {
+    display: block;
+    margin-bottom: 0.12rem;
+    margin-right: 0.12rem;
+    text-align: center;
+    width: 0.68rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    background: rgba(39, 130, 244, 1);
+    border-radius: 0.18rem;
+    font-size: 0.12rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    float: right;
+}
+
+.orderWrapper .allOrders .orders .returnCar {
+    display: block;
+    margin-bottom: 0.12rem;
+    margin-right: 0.12rem;
+    text-align: center;
+    width: 0.92rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    background: rgba(39, 130, 244, 1);
+    border-radius: 0.18rem;
+    font-size: 0.12rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    float: right;
+}
+
+.orderWrapper .allOrders .orders::after {
+    content: "";
+    display: table;
+}
+
+
+
+/* details style */
+.detailsWrapper {
+    width: 3.75rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    background: rgba(248, 251, 255, 1);
+    z-index: 1;
+}
+
+.detailsWrapper .linearGra {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    width: 3.75rem;
+    height: 4rem;
+    background: linear-gradient(180deg, rgba(39, 130, 244, 1) 0%, rgba(39, 130, 244, 0) 100%);
+}
+
+.detailsWrapper h2 {
+    height: 0.28rem;
+    line-height: 0.28rem;
+    padding-top: 0.16rem;
+    padding-left: 0.16rem;
+    font-size: 0.2rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+
+.detailsWrapper h3 {
+    height: 0.2rem;
+    padding-top: 0.04rem;
+    padding-left: 0.16rem;
+    font-size: 0.14rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+
+}
+
+.detailsWrapper .detailHead {
+    width: 3.43rem;
+    height: 2.8rem;
+    margin: 0.16rem 0.16rem 0 0.16rem;
+    background: #fff;
+    border-radius: 0.08rem;
+}
+
+.detailsWrapper .stationDetails {
+    height: 1.93rem;
+}
+
+.detailsWrapper .detailHead h4 {
+    width: 3.19rem;
+    margin-left: 0.12rem;
+    padding-right: 0.12rem;
+    height: 0.43rem;
+    line-height: 0.43rem;
+    border-bottom: 1px solid rgba(223, 226, 230, 1);
+    font-size: 0.15rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+}
+
+.detailsWrapper .detailHead .detailHeadInfo p {
+    display: flex;
+    height: 0.2rem;
+    line-height: 0.2rem;
+    padding: 0 0.12rem 0.08rem 0.12rem;
+}
+
+.detailsWrapper .detailHead .detailHeadInfo p span {
+    display: inline-block;
+    width: 0.72rem;
+    font-size: 0.14rem;
+    font-weight: 400;
+    color: rgba(159, 166, 174, 1);
+}
+
+.detailsWrapper .detailHead .detailHeadInfo p i {
+    display: inline-block;
+    width: 2.37rem;
+    padding-left: 0.1rem;
+    color: rgba(8, 16, 26, 1);
+    font-size: 0.14rem;
+    font-weight: 400;
+    text-align: right;
+}
+
+#thisCarNum {
+    padding-top: 0;
+}
+
+.detailsWrapper .detailHead .detailHeadInfo .carNum {
+    padding-top: 0.12rem;
+}
+
+.detailsWrapper .detailHead .detailHeadInfo .inspectionArea {
+    padding-top: 0.12rem;
+}
+
+.detailsWrapper .detailHead .detailHeadInfo .receiveAddress {
+    height: 0.4rem;
+}
+
+.detailsWrapper .detailHead .detailHeadInfo .inspectionInfo {
+    height: 0.8rem;
+    padding-bottom: 0.12rem;
+}
+
+.detailsWrapper .detailHead .detailHeadInfo .inspectionInfo span {
+    width: 0.68rem;
+}
+
+.detailsWrapper .detailHead .detailHeadInfo .inspectionInfo em {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-left: 0.04rem;
+}
+
+#firstPic {
+    background: url('../img/bg4.jpg') no-repeat center;
+    background-size: 0.8rem 0.8rem;
+}
+
+#secondPic {
+    background: url('../img/bg5.jpg') no-repeat center;
+    background-size: 0.8rem 0.8rem;
+}
+
+#thirdPic {
+    background: url('../img/bg6.jpg') no-repeat center;
+    background-size: 0.8rem 0.8rem;
+}
+
+.detailsWrapper .deliveryInfo {
+    height: 2.53rem !important;
+}
+
+.detailsWrapper .deliveryInfo .inspectionMark {
+    display: flex;
+    justify-content: space-between;
+    height: 0.8rem;
+    padding-top: 0.12rem;
+}
+
+.detailsWrapper .deliveryInfo .inspectionMark em {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: url('../img/bg2.jpg') no-repeat center;
+    background-size: 0.8rem 0.8rem;
+}
+
+.detailsWrapper .detailContent {
+    width: 3.43rem;
+    height: 2.01rem;
+    margin: 0.08rem 0.16rem 0rem 0.16rem;
+    background: #fff;
+    border-radius: 0.08rem;
+}
+
+.detailsWrapper .stationInfo {
+    height: 1.65rem;
+}
+
+.detailsWrapper .takeCarInfo {
+    height: 1.93rem;
+}
+
+.detailsWrapper .detailContent h4 {
+    width: 3.31rem;
+    height: 0.44rem;
+    line-height: 0.44rem;
+    font-size: 0.15rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+    border-bottom: 1px solid rgba(223, 226, 230, 1);
+    margin-left: 0.12rem;
+    margin-bottom: 0.12rem;
+}
+
+.detailsWrapper .detailContent p {
+    display: flex;
+    height: 0.2rem;
+    line-height: 0.2rem;
+    padding: 0 0.12rem 0.08rem 0.12rem;
+}
+
+.detailsWrapper .detailContent p span {
+    display: inline-block;
+    width: 0.72rem;
+    font-size: 0.14rem;
+    font-weight: 400;
+    color: rgba(159, 166, 174, 1);
+}
+
+.detailsWrapper .detailContent p i {
+    display: inline-block;
+    width: 2.37rem;
+    padding-left: 0.1rem;
+    color: rgba(8, 16, 26, 1);
+    font-size: 0.14rem;
+    font-weight: 400;
+    text-align: right;
+}
+
+.detailsWrapper .detailContent .payAmount {
+    padding-bottom: 0.12rem;
+}
+
+.detailsWrapper .detailBtn,
+.detailBtn1 {
+    width: 3.43rem;
+    padding: 0.16rem;
+    display: flex;
+    margin-top: 0.2rem;
+}
+
+.detailsWrapper .detailBtn p,
+.detailBtn1 p {
+    width: 1.66rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(198, 205, 213, 1);
+    font-size: 0.18rem;
+    font-weight: 500;
+}
+
+.detailsWrapper .detailBtn a,
+.detailBtn1 a {
+    display: block;
+    width: 1.66rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(198, 205, 213, 1);
+    font-size: 0.18rem;
+    font-weight: 500;
+}
+
+.detailsWrapper .detailBtn .leftBtn,
+.detailBtn1 .leftBtn {
+    color: rgba(159, 166, 174, 1);
+    margin-right: 0.11rem;
+}
+
+.detailsWrapper .detailBtn .rightBtn,
+.detailBtn1 .rightBtn {
+    background: rgba(39, 130, 244, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+.detailsWrapper .bigBtn {
+    position: fixed;
+    bottom: 0.4rem;
+    width: 3.43rem;
+    margin: 0.16rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(198, 205, 213, 1);
+    font-size: 0.18rem;
+    color: rgba(159, 166, 174, 1);
+}
+
+.detailsWrapper .bigBtn1 {
+    display: block;
+    position: fixed;
+    bottom: 0.4rem;
+    width: 3.43rem;
+    margin: 0.16rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(198, 205, 213, 1);
+    font-size: 0.18rem;
+    color: #fff;
+    background: rgba(39, 130, 244, 1);
+}
+
+/* confirmOrder style */
+
+.conWrapper {
+    width: 3.75rem;
+    height: 100%;
+    margin: 0 auto;
+    background: rgba(248, 251, 255, 1);
+}
+
+.conWrapper .carInfo {
+    display: flex;
+    justify-content: space-between;
+    width: 3.43rem;
+    height: 0.36rem;
+    line-height: 0.36rem;
+    padding: 0 0.16rem;
+}
+
+.conWrapper .carInfo p {
+    font-size: 0.14rem;
+    font-weight: 400;
+    color: rgba(8, 16, 26, 1);
+}
+
+.conWrapper .carInfo .conCarNum span:nth-of-type(2) {
+    padding-left: 0.16rem;
+}
+
+.conWrapper .carInfo .conAddress em {
+    color: rgba(159, 166, 174, 1);
+}
+
+.conWrapper .carInfo .conAddress span {
+    padding-left: 0.16rem;
+}
+
+.conWrapper .handleType {
+    width: 3.43rem;
+    height: 1.77rem;
+    margin: 0 0.16rem 0.08rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0.08rem;
+}
+
+.conWrapper .handleType .handleTypeHead {
+    width: 3.19rem;
+    height: 0.45rem;
+    padding: 0 0.12rem;
+    border-bottom: 1px solid rgba(223, 226, 230, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.16rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+}
+
+.conWrapper .handleType .handleTypeHead .changeHandleType {
+    color: rgba(39, 130, 244, 1);
+}
+
+.conWrapper .handleType .handleTypeImg {
+    width: 3.19rem;
+    height: 1.06rem;
+    margin: 0.12rem;
+    background: url('../img/img_process_1@2x.png') no-repeat center;
+    background-size: 3.19rem 1.06rem;
+}
+
+.conWrapper .conStationInfo {
+    width: 3.43rem;
+    height: auto;
+    margin: 0 0.16rem;
+    background: #fff;
+    border-radius: 0.08rem;
+}
+
+.conWrapper .conStationInfo p {
+    background: url('../img/editor_icon_next@2x.png') no-repeat 3.02rem;
+    background-size: 0.16rem 0.16rem;
+}
+
+
+.conWrapper .inputInfo p {
+    width: 3.19rem;
+    height: 0.49rem;
+    line-height: 0.49rem;
+    margin-left: 0.12rem;
+    padding-right: 0.12rem;
+    border-bottom: 1px solid rgba(223, 226, 230, 1);
+
+    color: rgba(8, 16, 26, 1);
+    display: flex;
+}
+
+.conWrapper .inputInfo p span {
+    display: inline-block;
+    width: 0.64rem;
+    white-space: nowrap;
+    font-size: 0.15rem;
+}
+
+.conWrapper .inputInfo p input,
+textarea {
+    margin-left: 0.24rem;
+    font-size: 0.15rem;
+}
+
+.conWrapper .inputInfo p textarea {
+    margin-top: 0.17rem;
+    height: 0.44rem;
+}
+
+.conWrapper .inputInfo .conGetCode input {
+    width: 1.55rem;
+}
+
+.conWrapper .conStationInfo::after {
+    display: table;
+    content: '';
+}
+
+.conWrapper .conStationInfo .chooseStationInfo {
+    width: 3.19rem;
+    height: 0.83rem;
+    margin: 0 0.11rem 0.12rem;
+    background: #F8FBFF;
+    border-radius: 0.04rem;
+    border: 1px solid rgba(223, 226, 230, 0.5);
+
+}
+
+.conWrapper .conStationInfo .chooseStationInfo .chooseStationInfo_firstText {
+    font-size: 0.14rem;
+    font-weight: 500;
+    width: 2.95rem;
+    padding: 0.12rem 0.12rem 0.05rem;
+}
+
+.conWrapper .conStationInfo .chooseStationInfo .chooseStationInfo_secondText {
+    font-size: 0.12rem;
+    font-weight: 500;
+    width: 2.83rem;
+    color: #9FA6AE;
+    margin-left: 0.12rem;
+    padding: 0 0.12rem;
+    background: url('../img/confirm_icon_adress@2x.png') no-repeat left 0.02rem;
+    background-size: 0.1rem 0.12rem;
+}
+
+.conWrapper .conStationInfo .discoverStation .chooseStationInfo_choose {
+    text-align: right;
+    width: 2.4rem;
+    color: rgba(39, 130, 244, 1);
+}
+
+.conWrapper .carOwnerInfo {
+    width: 3.43rem;
+    height: 1.5rem;
+    margin: 0.08rem 0.16rem 0;
+    background: #fff;
+    border-radius: 0.08rem;
+}
+
+.conWrapper .inputInfo .discoverStation,
+.conRemarks,
+.conDetailedAddress {
+    border-bottom: none !important;
+}
+
+.conWrapper .conBottom {
+    width: 3.75rem;
+    height: 0.5rem;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+}
+
+.conWrapper .conBottom span:nth-of-type(1) {
+    display: inline-block;
+    width: 2.15rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    color: rgba(159, 166, 174, 1);
+    font-size: 0.14rem;
+}
+
+.conWrapper .conBottom span:nth-of-type(1) em {
+    color: rgba(255, 88, 0, 1);
+    padding-right: 0.08rem;
+    font-size: 0.18rem;
+}
+
+.conWrapper .conBottom span:nth-of-type(2) {
+    display: inline-block;
+    width: 1.6rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    color: #fff;
+    background: rgba(198, 205, 213, 1);
+    box-shadow: 0px 1px 0px 0px rgba(223, 226, 230, 1);
+    font-size: 0.18rem;
+}
+
+.conWrapper .callToKefu {
+    position: fixed;
+    right: 0.12rem;
+    bottom: 2rem;
+    display: block;
+    width: 0.62rem;
+    height: 0.66rem;
+    background: url('../img/home_img_service@2x.png') no-repeat center;
+    background-size: 0.62rem 0.66rem;
+}
+
+.conWrapper .inputInfo .sendCode {
+    float: right;
+    font-size: 0.15rem;
+    color: rgba(39, 130, 244, 1);
+    white-space: nowrap !important;
+}
+
+.conWrapper .conTakeCarInfo {
+    width: 3.43rem;
+    height: 1.5rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0.08rem;
+    margin: 0 0.16rem 0.08rem;
+}
+
+.conWrapper .conTakeCarInfo .conTakeCarTime,
+.conTakeCarAddress {
+    background: url('../img/editor_icon_next@2x.png') no-repeat 3.02rem;
+    background-size: 0.16rem 0.16rem;
+}
+
+.conWrapper .conTakeCarInfo .conDetailedAddress {
+    background: url('../img/confirm_icon_adress_2@2x.png') no-repeat 3.02rem;
+    background-size: 0.16rem 0.16rem;
+}
+
+.conWrapper .conExemptInfo {
+    width: 3.43rem;
+    height: 2.69rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0.08rem;
+    margin: 0 0.16rem 0.08rem;
+}
+
+.conWrapper .conExemptInfo h2 {
+    width: 3.31rem;
+    margin-left: 0.12rem;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    font-size: 0.16rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+    border-bottom: 1px solid rgba(223, 226, 230, 1);
+}
+
+.conWrapper .uploadInfo {
+    width: 3.31rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    margin: 0 0.16rem 0.08rem;
+    padding-left: 0.12rem;
+    background: #fff;
+    border-radius: 0.08rem;
+    font-size: 0.16rem;
+    color: rgba(8, 16, 26, 1);
+    display: flex;
+}
+
+.conWrapper .uploadInfo span {
+    display: inline-block;
+    width: 0.16rem;
+    height: 0.16rem;
+    background: url('../img/editor_icon_next@2x.png') no-repeat right;
+    background-size: 0.16rem 0.16rem;
+    margin: 0.17rem 0 0.17rem 2.06rem;
+}
+
+.conWrapper .changeTypeBox {
+    position: fixed;
+    bottom: 0;
+    width: 3.75rem;
+    height: 3.46rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0.16rem 0.16rem 0px 0px;
+    z-index: 4;
+}
+
+.conWrapper .changeTypeBox h2 {
+    width: 3.43rem;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    margin-left: 0.16rem;
+    padding-right: 0.16rem;
+    margin-bottom: 0.12rem;
+    font-size: 0.16rem;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(223, 226, 230, 1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.conWrapper .changeTypeBox h2 span em {
+    color: rgba(159, 166, 174, 1);
+    padding-right: 0.24rem;
+}
+
+.conWrapper .changeTypeBox h2 span i {
+    color: rgba(39, 130, 244, 1);
+}
+
+.conWrapper .changeTypeBox div {
+    width: 3.43rem;
+    margin: 0 0.16rem 0.08rem;
+    height: 0.78rem;
+    background: rgba(248, 251, 255, 1);
+    border-radius: 0.04rem;
+    border: 1px solid rgba(223, 226, 230, 1);
+    position: relative;
+}
+
+.conWrapper .changeTypeBox div p {
+    width: 3.19rem;
+    padding: 0 0.12rem;
+}
+
+.conWrapper .changeTypeBox div p:nth-of-type(1) {
+    padding: 0.16rem 0.12rem 0.04rem;
+    font-size: 0.16rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+}
+
+.conWrapper .changeTypeBox div p:nth-of-type(2) {
+    font-size: 0.14rem;
+    color: rgba(159, 166, 174, 1);
+}
+
+.conWrapper .changeTypeBox .t_box_check {
+    display: inline-block;
+    width: 0.2rem;
+    height: 0.2rem;
+    position: absolute;
+    top: 0.3rem;
+    right: 0.12rem;
+    background: url('../img/icon_box_nor@2x.png') no-repeat center;
+    background-size: 0.2rem 0.2rem;
+}
+
+.t_box_checked {
+    background: url('../img/home_icon_box_sel@2x.png') no-repeat center !important;
+    background-size: 0.2rem 0.2rem !important;
+}
+
+
+
+/* myCoupons style */
+
+.coWrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.coWrapper .head {
+    width: 100%;
+    height: 0.45rem;
+    position: relative;
+}
+
+.coWrapper .head .choose {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.15rem;
+    font-weight: bold;
+}
+
+.coWrapper .head .choose span {
+    position: relative;
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.21rem;
+    text-align: center;
+}
+
+.coWrapper .head .choose .checked {
+    color: #2782F4FF;
+}
+
+.coWrapper .head .choose .checked::after {
+    content: ' ';
+    display: inline-block;
+    width: 0.2rem;
+    height: 2px;
+    background: #2782F4FF;
+    position: absolute;
+    bottom: -0.01rem;
+    left: 0.15rem;
+}
+
+.coWrapper .mescroll {
+    width: 3.43rem;
+    margin-top: 0.08rem;
+    padding: 0 0.16rem;
+    height: 6.9rem;
+}
+
+.coWrapper .mescroll .allCoupons .xiCoupons {
+    display: block;
+}
+
+.coWrapper .mescroll .allCoupons .xiCoupons .bg {
+    margin-bottom: 0.08rem;
+    width: 3.43rem;
+    height: 1.08rem;
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+    display: flex;
+}
+
+.coWrapper .mescroll .allCoupons .xiCoupons .bg div {
+    width: 1.4rem;
+    height: 1.08rem;
+    padding-top: 0.31rem;
+    padding-left: 1.2rem;
+}
+
+.coWrapper .mescroll .allCoupons .xiCoupons .bg a {
+    display: block;
+    width: 0.56rem;
+    height: 0.2rem;
+    background: rgba(255, 88, 0, 1);
+    border-radius: 0.15rem;
+    font-size: 0.12rem;
+    color: rgba(255, 255, 255, 1);
+    line-height: 0.2rem;
+    text-align: center;
+    margin-top: 0.45rem;
+    margin-left: 0.15rem;
+}
+
+.coWrapper .mescroll .allCoupons .xiCoupons p:nth-of-type(1) {
+    font-size: 0.15rem;
+    font-weight: 600;
+    padding-bottom: 0.08rem;
+    color: rgba(8, 16, 26, 1);
+}
+
+.coWrapper .mescroll .allCoupons .xiCoupons p:nth-of-type(2) {
+    font-size: 0.12rem;
+    font-weight: 400;
+    color: rgba(159, 166, 174, 1);
+}
+
+
+/* viewCodeCoupons style */
+
+.vWrapper {
+    box-sizing: content-box;
+    width: 3.43rem;
+    padding: 0 0.16rem;
+    padding-top: 0.17rem;
+    margin: 0 auto;
+}
+
+.vWrapper .content {
+    width: 3.19rem;
+    height: 3.72rem;
+    padding: 0 0.12rem;
+}
+
+.vWrapper .content .vHead {
+    height: 0.97rem;
+    border-bottom: 1px dashed #DFE2E6;
+}
+
+.vWrapper .content .vHead p {
+    padding-top: 0.04rem;
+    font-size: 0.12rem;
+    font-weight: 400;
+    color: #08101A;
+}
+
+.vWrapper .content .vHead p:nth-of-type(1) {
+    padding-top: 0.12rem;
+    font-size: 0.2rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+}
+
+.vWrapper .content .vHead p:nth-of-type(3) {
+    color: #9FA6AE;
+}
+
+.vWrapper .content .vCode {
+    height: 1.98rem;
+    background: url('../img/code.png') no-repeat center;
+    background-size: 1.2rem 1.2rem;
+    padding: 0.25rem 0.7rem 0 0.7rem;
+}
+
+.vWrapper .content .vCode p:nth-of-type(1) {
+    width: 1.8rem;
+    height: 0.17rem;
+    line-height: 0.17rem;
+    text-align: center;
+    font-size: 0.12rem;
+    font-weight: 400;
+    color: rgba(159, 166, 174, 1);
+}
+
+.vWrapper .content .vCode p:nth-of-type(2) {
+    width: 1.8rem;
+    height: 0.22rem;
+    line-height: 0.22rem;
+    text-align: center;
+    padding-top: 1.4rem;
+    font-size: 0.16rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+}
+
+.vWrapper .content .vBottom {
+    height: 0.5rem;
+    border-top: 1px solid #DFE2E6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vWrapper .content .vBottom span:nth-of-type(1) {
+    font-size: 0.15rem;
+    font-weight: 400;
+    color: rgba(8, 16, 26, 1);
+}
+
+.vWrapper .content .vBottom span:nth-of-type(2) {
+    font-size: 0.12rem;
+    font-weight: 400;
+    color: rgba(159, 166, 174, 1);
+    padding-right: 0.16rem;
+    background: url('../img/icon_on@2x.png') no-repeat right center;
+    background-size: 0.16rem 0.16rem !important;
+}
+
+.vWrapper .vExplain {
+    padding-top: 0.12rem;
+}
+
+.vWrapper .vExplain h2 {
+    font-size: 0.14rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+}
+
+.vWrapper .vExplain ul {
+    padding-top: 0.03rem;
+}
+
+.vWrapper .vExplain ul li {
+    font-size: 0.12rem;
+    font-weight: 400;
+    color: rgba(159, 166, 174, 1);
+    padding-bottom: 0.05rem;
+}
+
+
+/* supplementaryInfo style */
+
+.supplementWrapper {
+    width: 3.75rem;
+    height: 100%;
+    margin: 0 auto;
+    background: rgba(248, 251, 255, 1);
+
+}
+
+.supplementWrapper div {
+    background: #fff;
+    margin-bottom: 0.08rem;
+}
+
+.supplementWrapper .supHead {
+    display: flex;
+    width: 3.75rem;
+    background: rgba(255, 255, 255, 1);
+}
+
+.supplementWrapper h2 {
+    width: 3.43rem;
+    margin-left: 0.16rem;
+    padding-right: 0.16rem;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    border-bottom: 1px solid rgba(223, 226, 230, 1);
+}
+
+.supplementWrapper .supHead div {
+    margin-top: 0.12rem;
+    margin-left: 0.16rem;
+    width: 1.12rem;
+    height: 1.36rem;
+    background: url('../img/img_add\ picture@2x.png') no-repeat top;
+    background-size: 1.12rem 1.12rem;
+}
+
+.supplementWrapper .supHead div input {
+    opacity: 0;
+    width: 1.12rem;
+    height: 1.12rem;
+}
+
+.supplementWrapper .supHead div p {
+    width: 1.12rem;
+    height: 0.2rem;
+    text-align: center;
+    line-height: 0.2rem;
+    font-size: 0.12rem;
+    color: rgba(159, 166, 174, 1);
+    padding-top: 0.04rem;
+}
+
+.supplementWrapper .supSubmit {
+    width: 3.43rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    margin: 1.2rem 0.16rem 0;
+    background: rgba(39, 130, 244, 1);
+    border-radius: 0.25rem;
+    font-size: 0.18rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+
+
+/* choose_station_wrapper style */
+.choose_station_wrapper {
+    width: 3.75rem;
+    height: 100%;
+    margin: 0 auto;
+    background: #fff;
+    position: relative;
+}
+
+.choose_station_wrapper .choose_station_wrapper_head {
+    width: 100%;
+    height: 0.43rem;
+    border-top: 1px solid rgba(223, 226, 230, 1);
+    border-bottom: 1px solid rgba(223, 226, 230, 1);
+    position: fixed;
+    top: 0;
+    background: #fff;
+    z-index: 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.choose_station_wrapper .choose_station_wrapper_head p {
+
+    height: 0.2rem;
+    font-size: 0.14rem;
+    line-height: 0.2rem;
+    background: url('../img/city_icon_down@2x.png') no-repeat right;
+    background-size: 0.16rem 0.16rem;
+    padding-right: 0.16rem;
+}
+
+.choose_station_wrapper .mescroll {
+    margin-top: 0.45rem;
+}
+
+.choose_station_wrapper .mescroll .all_stations {
+    width: 100%;
+    height: auto;
+}
+
+.choose_station_wrapper .mescroll .stations {
+    width: 3.41rem;
+    margin-left: 0.16rem;
+    padding-right: 0.16rem;
+    border: 1px solid transparent;
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid rgba(223, 226, 230, 1);
+}
+
+.choose_station_wrapper .mescroll .stations .stations_bg {
+    width: 1.07rem;
+    height: 0.89rem;
+    margin: 0.12rem 0;
+    background: url('../img/bg5.jpg') no-repeat center;
+    background-size: 100% 100%;
+}
+
+.choose_station_wrapper .mescroll .stations .statons_info {
+    padding: 0.12rem 0 0.12rem 0.08rem;
+}
+
+.choose_station_wrapper .mescroll .stations .statons_info .stations_name {
+    font-size: 0.16rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+}
+
+.choose_station_wrapper .mescroll .stations .statons_info .stations_time {
+    font-size: 0.14rem;
+    color: rgba(159, 166, 174, 1);
+    padding-top: 0.12rem;
+}
+
+.choose_station_wrapper .mescroll .stations .statons_info .stations_position {
+    font-size: 0.14rem;
+    color: rgba(159, 166, 174, 1);
+    margin-top: 0.16rem;
+    padding-left: 0.12rem;
+    width: 2.16rem;
+    display: flex;
+    justify-content: space-between;
+    background: url('../img/confirm_icon_adress@2x.png') no-repeat left center;
+    background-size: 0.1rem 0.12rem;
+}
+
+.choose_station_wrapper .mescroll .stations .stations_check {
+    width: 0.2rem;
+    height: 0.2rem;
+    position: absolute;
+    top: 0.45rem;
+    right: 0.16rem;
+    background: url('../img/icon_box_nor@2x.png') no-repeat center;
+    background-size: 100% 100%;
+}
+
+.stations_checked {
+    background: url('../img/home_icon_box_sel@2x.png') no-repeat center !important;
+    background-size: 100% 100% !important;
+}
+
+
+/* confirmOrder style */
+
+.confWrapper {
+    width: 3.75rem;
+    margin: 0 auto;
+}
+
+.confWrapper {
+    width: 3.43rem;
+    padding: 0 0.16rem;
+}
+
+.confWrapper .conOrderInfo {
+    height: 1.5rem;
+    padding-top: 0.08rem;
+    margin-left: 0.12rem;
+}
+
+.confWrapper .conOrderInfo p {
+    width: 3.19rem;
+    height: 0.49rem;
+    padding-right: 0.12rem;
+    font-size: 0.16rem;
+    color: rgba(159, 166, 174, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #DFE2E6;
+}
+
+.confWrapper .conOrderInfo p:nth-of-type(2) span:nth-of-type(2) {
+    background: url('../img/icon_on@2x.png') no-repeat right center;
+    background-size: 0.2rem 0.18rem;
+    padding-right: 0.16rem;
+}
+
+.confWrapper .conOrderInfo p span:nth-of-type(2) {
+    color: #FF5800;
+}
+
+.confWrapper .conOrderInfo p:nth-of-type(1) span:nth-of-type(2) {
+    color: #08101A;
+}
+
+.confWrapper .conOrderInfo p:nth-of-type(3) {
+    border: none;
+}
+
+.confWrapper .conPayWays {
+    height: 1.5rem;
+    padding-top: 0.08rem;
+}
+
+.confWrapper .conPayWays h2 {
+    height: 0.49rem;
+    line-height: 0.49rem;
+    padding: 0 0.12rem;
+    border-bottom: 1px solid #DFE2E6;
+    font-size: 0.16rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+}
+
+.confWrapper .conPayWays p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 0.49rem;
+    margin-left: 0.12rem;
+    padding-right: 0.12rem;
+    font-size: 0.15rem;
+    font-weight: 400;
+    color: rgba(8, 16, 26, 1);
+}
+
+.confWrapper .conPayWays p:nth-of-type(1) span:nth-of-type(1) {
+    background: url('../img/pay_icon_wechat@2x.png') no-repeat left center;
+    background-size: 0.2rem 0.18rem;
+    padding-left: 0.3rem;
+}
+
+.confWrapper .conPayWays p:nth-of-type(2) span:nth-of-type(1) {
+    background: url('../img/pay_icon_alipay@2x.png') no-repeat left center;
+    background-size: 0.2rem 0.18rem;
+    padding-left: 0.3rem;
+}
+
+.confWrapper .conPayWays p span:nth-of-type(2) {
+    display: inline-block;
+    width: 0.2rem;
+    height: 0.2rem;
+    border: 1px solid rgba(198, 205, 213, 1);
+    border-radius: 50%;
+}
+
+.confWrapper .conPayWays p:nth-of-type(1) {
+    border-bottom: 1px solid #DFE2E6;
+}
+
+.conChecked {
+    background: url('../img/home_icon_box_sel@2x.png') no-repeat !important;
+    background-size: 100% !important;
+}
+
+.confWrapper .conPayBtn {
+    display: inline-block;
+    margin-top: 0.4rem;
+    width: 3.43rem;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    text-align: center;
+    background: rgba(39, 130, 244, 1);
+    border-radius: 0.25rem;
+    font-size: 0.18rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+
+.useCoupons {
+    position: absolute;
+    bottom: 0;
+    border-radius: 0.16rem 0.16rem 0 0;
+    background: rgba(255, 255, 255, 1);
+    width: 3.43rem;
+    z-index: 999;
+    padding: 0 0.16rem;
+    margin: 0 auto;
+}
+
+.useCoupons h2 {
+    width: 100%;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    font-size: 0.16rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+    border-bottom: 1px solid #DFE2E6;
+    background: url('../img/top_icon_close@2x.png') no-repeat right center;
+    background-size: 0.14rem 0.14rem;
+}
+
+.useCoupons .allUseCoupons {
+    margin-top: 0.12rem;
+    height: 3rem;
+    overflow: auto;
+}
+
+.useCoupons .useCoupon {
+    width: 100%;
+    height: 1.08rem;
+    background: url('../img/img_bg_coupons@2x.png') no-repeat;
+    background-size: 100%;
+    display: flex;
+    margin-bottom: 0.12rem;
+}
+
+.useCoupons .useCoupon span:nth-of-type(1) {
+    display: inline-block;
+    width: 1.12rem;
+    height: 1.08rem;
+    line-height: 1.08rem;
+    text-align: center;
+    font-size: 0.48rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+
+.useCoupons .useCoupon span:nth-of-type(1) em {
+    font-size: 0.24rem;
+}
+
+.useCoupons .useCoupon span:nth-of-type(2) {
+    display: inline-block;
+    width: 1.75rem;
+    height: 1.08rem;
+    padding: 0 0.08rem;
+}
+
+.useCoupons .useCoupon span:nth-of-type(2) p:nth-of-type(1) {
+    height: 0.21rem;
+    font-size: 0.15rem;
+    font-weight: 500;
+    color: rgba(8, 16, 26, 1);
+    line-height: 0.21rem;
+    padding-top: 0.12rem;
+}
+
+.useCoupons .useCoupon span:nth-of-type(2) p:nth-of-type(2) {
+    height: 0.34rem;
+    font-size: 0.12rem;
+    font-weight: 400;
+    color: rgba(8, 16, 26, 1);
+    padding-top: 0.08rem;
+}
+
+.useCoupons .useCoupon span:nth-of-type(2) p:nth-of-type(3) {
+    height: 0.17rem;
+    font-size: 0.12rem;
+    font-weight: 400;
+    color: rgba(159, 166, 174, 1);
+    padding-top: 0.03rem;
+}
+
+.useCoupons .useCoupon span:nth-of-type(3) {
+    display: inline-block;
+    width: 0.4rem;
+    height: 1.08rem;
+    line-height: 1.08rem;
+}
+
+.useCoupons .useCoupon span:nth-of-type(3) em {
+    width: 0.2rem;
+    height: 0.2rem;
+    border: 1px solid rgba(198, 205, 213, 1);
+    border-radius: 50%;
+    margin-left: 0.06rem;
+}
+
+.useCoupons .noUse {
+    padding: 0.08rem 0.12rem 0 0.12rem;
+    width: 3.19rem;
+    height: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.useCoupons .noUse span:nth-of-type(2) {
+    width: 0.2rem;
+    height: 0.2rem;
+    border: 1px solid rgba(198, 205, 213, 1);
+    border-radius: 50%;
+}
+
+
+/* pay style */
+
+.payWrapper {
+    width: 3.43rem;
+    padding: 0 0.16rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.payWrapper .img_over {
+    width: 2.52rem;
+    height: 1.41rem;
+    margin-top: 1.12rem;
+    margin-left: 0.46rem;
+    background: url('../img/img_over2@2x.png') no-repeat center;
+    background-size: 100% 100%;
+}
+
+.payWrapper .toDingDan {
+    display: inline-block;
+    margin-top: 1.5rem;
+    width: 3.43rem;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    text-align: center;
+    background: rgba(39, 130, 244, 1);
+    border-radius: 0.25rem;
+    font-size: 0.18rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}

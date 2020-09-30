@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>订单详情</title>
+    <link media="all" rel="stylesheet" href="static/css/init.css" type="text/css">
+    <link media="all" rel="stylesheet" href="static/css/index.css" type="text/css">
+</head>
+
+<body>
+    <div class="detailsWrapper clearfix">
+        <div class="linearGra"></div>
+        <h2 class="detailsText">待补交资料</h2>
+        <h3 class="detailsWaitPay thisHide">请在50分钟内完成支付，超时将会自动取消</h3>
+        <div class="detailHead">
+            <h4>6年免检</h4>
+            <div class="detailHeadInfo">
+                <p class="carNum"><span>车牌号</span><i>粤A B123F</i></p>
+                <p class="addressee"><span>收件人</span><i>王小姐</i></p>
+                <p class="phoneNum"><span>手机号码</span><i>18336802406</i></p>
+                <p class="receiveAddress"><span>收件地址</span><i>广东省深圳市宝安区西乡盐田宝安大道4004号旭生大厦21楼</i></p>
+                <p class="inspectionInfo"><span>年检资料</span><em id="firstPic"></em><em id="secondPic"></em><em
+                        id="thirdPic"></em></p>
+            </div>
+        </div>
+        <div class="deliveryInfo detailContent ">
+            <h4>快递信息</h4>
+            <p class="inspectionMark"><span>年检标</span><em></em></p>
+            <p class="deliveryCompany"><span>快递公司</span><i>圆通快递</i></p>
+            <p class="deliveryNum"><span>快递单号</span><i>126793404085757950</i></p>
+            <p class="remarks"><span>备注</span><i>备注信息只展示两行，距离左侧文字固定12，超过就换行显示</i></p>
+        </div>
+        <div class="detailContent">
+            <h4>订单信息</h4>
+            <p class="orderNum"><span>订单编号</span><i>126793404085757950</i></p>
+            <p class="orderTime"><span>下单时间</span><i>2010-12-23 15:45</i></p>
+            <p class="orderAmount"><span>订单金额</span><i>¥57.00</i></p>
+            <p class="orderDiscount"><span>优惠</span><i>- ¥5.00</i></p>
+            <p class="payAmount"><span>支付金额</span><i> ¥52.00</i></p>
+        </div>
+        <div class="detailBtn">
+            <p class="leftBtn">申请退款</p>
+            <p class="rightBtn">补交资料</p>
+        </div>
+        <div class="bigBtn thisHide">申请退款</div>
+    </div>
+    <script src="./static/js/rem.js"></script>
+    <script src="./static/js/jquery-1.9.1.js"></script>
+    <script src="./static/js/common.js"></script>
+    <script>
+        $(function () {
+            $('.leftBtn').on('click',function(){
+                window.location.href = './exemptOrder.html';
+            })
+            var status = getUrlParam('status')
+            if (status == 1) {
+                $('.detailsText').text('待支付');
+                $('.leftBtn').text('取消订单');
+                $('.rightBtn').text('支付 ¥52.00').prop('href','./confirmPay.html');
+                $('.detailsWaitPay').removeClass('thisHide');
+                $('.deliveryInfo').addClass('thisHide');
+            } else if (status == 2) {
+                $('.detailsText').text('待确认');
+                $('.bigBtn').removeClass('thisHide');
+                $('.detailBtn').addClass('thisHide');
+                $('.deliveryInfo').addClass('thisHide');
+            } else if (status == 3) {
+                $('.deliveryInfo').addClass('thisHide');
+            } else if (status == 4) {
+                $('.detailsText').text('待派单');
+                $('.bigBtn').removeClass('thisHide');
+                $('.detailBtn').addClass('thisHide');
+                $('.deliveryInfo').addClass('thisHide');
+            } else if (status == 5) {
+                $('.detailsText').text('年检中');
+                $('.bigBtn').removeClass('thisHide');
+                $('.detailBtn').addClass('thisHide');
+                $('.deliveryInfo').addClass('thisHide');
+            } else if (status == 6) {
+                $('.detailsText').text('已完成');
+                $('.detailBtn').addClass('thisHide');
+            } else if (status == 7) {
+                $('.detailsText').text('退款中');
+                $('.detailBtn').addClass('thisHide');
+                $('.deliveryInfo').addClass('thisHide');
+                $('.detailsWaitPay').removeClass('thisHide').text('钱款将于3个工作日内返还至您的付款账户');
+            } else if (status == 8) {
+                $('.detailsText').text('已退款');
+                $('.detailBtn').addClass('thisHide');
+                $('.deliveryInfo').addClass('thisHide');
+                $('.detailsWaitPay').removeClass('thisHide').text('钱款已返还至您的付款账户，请注意查收');
+            } else if (status == 9) {
+                $('.detailsText').text('已取消');
+                $('.detailBtn').addClass('thisHide');
+                $('.deliveryInfo').addClass('thisHide');
+            }
+        })
+    </script>
+</body>
+
+</html>

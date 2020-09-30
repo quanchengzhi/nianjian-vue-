@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>编辑车辆</title>
+    <link media="all" rel="stylesheet" href="static/css/init.css" type="text/css">
+    <link media="all" rel="stylesheet" href="static/css/index.css" type="text/css">
+    <link media="all" rel="stylesheet" href="static/css/datePick.css" type="text/css">
+</head>
+
+<body>
+    <div class="editWrapper clearfix">
+        <div
+            class="bgGray removeRemindHide allHide accRemindHide  chooseAbbHide carTypeHide seatsNumHide allInfoHide thisHide">
+        </div>
+        <div class="chooseAbbreviation allHide chooseAbbHide thisHide">
+            <h2>请选择地方简称</h2>
+            <div class="abbContent">
+                <span>京</span><span>津</span><span>冀</span><span>晋</span><span>蒙</span><span>辽</span><span
+                    class="thisMarginZero">吉</span><span>黑</span><span>沪</span><span>苏</span><span>浙</span><span>皖</span><span>闽</span><span
+                    class="thisMarginZero">赣</span><span>鲁</span><span>豫</span><span>鄂</span><span>湘</span><span
+                    class="abbChecked">粤</span><span>桂</span><span
+                    class="thisMarginZero">琼</span><span>蜀</span><span>黔</span><span>云</span><span>渝</span><span>藏</span><span>陕</span><span
+                    class="thisMarginZero">甘</span><span>青</span><span>宁</span><span>新</span>
+            </div>
+        </div>
+        <div class="chooseCarType allHide carTypeHide thisHide">
+            <div class="carTypeHead">
+                <span>请选择车辆类型</span><span class="carTypeBtn"><em>取消</em><i>确定</i></span>
+            </div>
+            <div class="carTypeContent">
+                <p class="carTypeChecked">私家车</p>
+                <p>公司车</p>
+            </div>
+        </div>
+        <div class="chooseSeatsNum allHide seatsNumHide thisHide">
+            <div class="seatsNumHead">
+                <span>请选择车辆座位数</span><span class="seatsNumBtn"><em>取消</em><i>确定</i></span>
+            </div>
+            <div class="seatsNumContent">
+                <p class="seatsNumChecked">5座以下</p>
+                <p>5座</p>
+                <p>6座</p>
+                <p>7座</p>
+            </div>
+        </div>
+        <div class="carNumAndEngineNumInfo allInfoHide allHide thisHide">
+            <div></div>
+            <p>我知道了</p>
+        </div>
+        <div class="accRemind accRemindHide allHide thisHide">
+        </div>
+        <div class="carInfo">
+            <h2>车辆信息</h2>
+            <p class="carNum"><span>车牌号码</span><span class="localAbbreviation">粤</span><input class="carNumCookie"
+                    type="text" maxlength="6" placeholder="请输入车牌号码"></p>
+            <p class="engineNum"><span>发动机号</span><input class="engineNumCookie" type="tel" maxlength="6"
+                    placeholder="请输入发动机号后6位"><i></i></p>
+            <p class="frameNum"><span>车架号</span><input class="frameNumCookie" type="tel" maxlength="6"
+                    placeholder="请输入车架号后6位"><i></i></p>
+            <p class="carType"><span>车辆类型</span><input class="carTypeCookie" type="text" readonly placeholder="请选择车辆类型">
+            </p>
+            <p class="seatsNum"><span>座位数</span><input class="seatsNumCookie" type="text" readonly
+                    placeholder="请选择车辆座位数"></p>
+            <p class="carRegistrationDate"><span>注册日期</span><input class="carRegistrationDateCookie" type="text"
+                    id="demo1" readonly placeholder="请选择车辆注册日期"></p>
+        </div>
+        <div class="accidentCasualties">
+            <h2>是否造成事故伤亡</h2>
+            <p class="accYes"><span>是</span><span class="accChecks "></span></p>
+            <p class="accNo"><span>否</span><span class="accChecks accChecked"></span></p>
+        </div>
+        <div class="editBtn">
+            <div class="saveBtn">保存</div>
+            <div class="removeBtn thisHide">删除车辆</div>
+        </div>
+        <div class="removeRemind removeRemindHide thisHide">
+            <div class="leftCancleBtn"></div>
+            <div class="rightConfirmBtn"></div>
+        </div>
+    </div>
+    <script src="./static/js/rem.js"></script>
+    <script src="./static/js/jquery-1.9.1.js"></script>
+    <script src="./static/js/jquery.cookie.js"></script>
+    <script src="./static/js/datePicker.js"></script>
+    <script src="./static/js/common.js"></script>
+    <script>
+        var status = getUrlParam('status');
+        if (status == 1) {
+            $('.removeBtn').removeClass('thisHide')
+        }
+
+        if ($.cookie()) {
+            $('.localAbbreviation').text($.cookie('localAbbreviation'));
+            $('.engineNumCookie').val($.cookie('engineNumCookie'));
+            $('.frameNumCookie').val($.cookie('frameNumCookie'));
+            $('.carTypeCookie').val($.cookie('carTypeCookie'));
+            $('.seatsNumCookie').val($.cookie('seatsNumCookie'));
+            $('.carNumCookie').val($.cookie('carNumCookie'));
+            $('.carRegistrationDateCookie').val($.cookie('carRegistrationDateCookie'));
+        }
+        var calendar = new datePicker();
+        calendar.init({
+            'trigger': '#demo1', /*按钮选择器，用于触发弹出插件*/
+            'type': 'date',/*模式：date日期；datetime日期时间；time时间；ym年月；*/
+            'minDate': '1900-1-1',/*最小日期*/
+            'maxDate': '2100-12-31',/*最大日期*/
+            'onSubmit': function () {/*确认时触发事件*/
+                var theSelectData = calendar.value;
+            },
+            'onClose': function () {/*取消时触发事件*/
+            }
+        });
+        $(function () {
+            if ($('.engineNumCookie').val() && $('.frameNumCookie').val() && $('.carTypeCookie').val() && $('.seatsNumCookie').val() && $('.carNumCookie').val() && $('.carRegistrationDateCookie').val()) {
+                $('.saveBtn').css('opacity', '1');
+            } else {
+                $('.saveBtn').css('opacity', '0.4');
+            }
+            $('input').on('input', function () {
+                if ($('.engineNumCookie').val() && $('.frameNumCookie').val() && $('.carTypeCookie').val() && $('.seatsNumCookie').val() && $('.carNumCookie').val() && $('.carRegistrationDateCookie').val()) {
+                    $('.saveBtn').css('opacity', '1');
+                } else {
+                    $('.saveBtn').css('opacity', '0.4');
+                }
+            })
+            $('.localAbbreviation').on('click', function () {
+                $('.chooseAbbHide').removeClass('thisHide');
+            })
+            $('.removeBtn').on('click', function () {
+                $('.removeRemindHide').removeClass('thisHide');
+            })
+            $('.leftCancleBtn').on('click', function () {
+                $('.removeRemindHide').addClass('thisHide');
+            })
+            $('.rightConfirmBtn').on('click', function () {
+                $.removeCookie('localAbbreviation', $('.localAbbreviation').text(), { expires: 7, path: '/' });
+                $.removeCookie('carNumCookie', $('.carNumCookie').val(), { expires: 7, path: '/' });
+                $.removeCookie('engineNumCookie', $('.engineNumCookie').val(), { expires: 7, path: '/' });
+                $.removeCookie('frameNumCookie', $('.frameNumCookie').val(), { expires: 7, path: '/' });
+                $.removeCookie('carTypeCookie', $('.carTypeCookie').val(), { expires: 7, path: '/' });
+                $.removeCookie('seatsNumCookie', $('.seatsNumCookie').val(), { expires: 7, path: '/' });
+                $.removeCookie('carRegistrationDateCookie', $('.carRegistrationDateCookie').val(), { expires: 7, path: '/' });
+                window.location.href = "./index.html";
+            })
+            $('.bgGray').on('click', function () {
+                $('.allHide').addClass('thisHide');
+            })
+            $('.abbContent span').on('click', function () {
+                $('.abbChecked').removeClass('abbChecked');
+                $(this).addClass('abbChecked');
+                $('.localAbbreviation').text($(this).text());
+                $('.chooseAbbHide').addClass('thisHide');
+            })
+            $('.carType input').on('click', function () {
+                $('.carTypeHide').removeClass('thisHide');
+            })
+            $('.carTypeBtn em').on('click', function () {
+                $('.carTypeHide').addClass('thisHide');
+            })
+            $('.carTypeBtn i').on('click', function () {
+                $('.carTypeHide').addClass('thisHide');
+                $('.carType input').val($('.carTypeChecked').text());
+            })
+            $('.carTypeContent p').on('click', function () {
+                $('.carTypeChecked').removeClass('carTypeChecked');
+                $(this).addClass('carTypeChecked');
+            })
+            $('.seatsNum input').on('click', function () {
+                $('.seatsNumHide').removeClass('thisHide');
+            })
+            $('.seatsNumBtn em').on('click', function () {
+                $('.seatsNumHide').addClass('thisHide');
+            })
+            $('.seatsNumBtn i').on('click', function () {
+                $('.seatsNumHide').addClass('thisHide');
+                $('.seatsNum input').val($('.seatsNumChecked').text());
+            })
+            $('.seatsNumContent p').on('click', function () {
+                $('.seatsNumChecked').removeClass('seatsNumChecked');
+                $(this).addClass('seatsNumChecked');
+            })
+            $('.engineNum i,.frameNum i').on('click', function () {
+
+                $('.allInfoHide').removeClass('thisHide');
+            })
+            $('.carNumAndEngineNumInfo p').on('click', function () {
+                $('.allInfoHide').addClass('thisHide');
+            })
+            $('.accidentCasualties p').on('click', function () {
+                $('.accChecked').removeClass('accChecked');
+                $(this).children('.accChecks').addClass('accChecked');
+                if ($('.accYes').children('.accChecks').hasClass('accChecked')) {
+                    $('.accRemindHide').removeClass('thisHide');
+                }
+            })
+            $('.accRemind').on('click', function () {
+                $('.accRemindHide').addClass('thisHide');
+                $('.accChecked').removeClass('accChecked');
+                $('.accNo').children('.accChecks').addClass('accChecked');
+            })
+            $('.saveBtn').on('click', function () {
+                $.cookie('localAbbreviation', $('.localAbbreviation').text(), { expires: 7, path: '/' });
+                $.cookie('carNumCookie', $('.carNumCookie').val(), { expires: 7, path: '/' });
+                $.cookie('engineNumCookie', $('.engineNumCookie').val(), { expires: 7, path: '/' });
+                $.cookie('frameNumCookie', $('.frameNumCookie').val(), { expires: 7, path: '/' });
+                $.cookie('carTypeCookie', $('.carTypeCookie').val(), { expires: 7, path: '/' });
+                $.cookie('seatsNumCookie', $('.seatsNumCookie').val(), { expires: 7, path: '/' });
+                $.cookie('carRegistrationDateCookie', $('.carRegistrationDateCookie').val(), { expires: 7, path: '/' });
+                window.location.href = "./index.html?status=1"
+            })
+        })
+    </script>
+</body>
+
+</html>

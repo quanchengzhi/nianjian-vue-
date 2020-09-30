@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>年检代办</title>
+    <link media="all" rel="stylesheet" href="static/css/init.css" type="text/css">
+    <link media="all" rel="stylesheet" href="static/css/index.css" type="text/css">
+    <link media="all" rel="stylesheet" href="static/css/LArea.css" type="text/css">
+</head>
+
+<body>
+
+
+    <div class="inspection-Wrapper clearfix" id="demo">
+        <div class="insHead"></div>
+        <a href="./commonProblem.html" class="insQuestions"><span>?</span>常见问题</a>
+        <div class="ins_second_wrapper clearfix">
+            <div class="addCar ">
+                <a href="./editCar.html" class="addCarImg"></a>
+                <p class="addCarImgExplain">添加您的爱车</p>
+                <p class="addCarText">实时查看车辆状态，精准服务提醒办理</p>
+            </div>
+            <div class="alreadyAddCar thisHide">
+                <div class="alreadyHead">
+                    <span class="alHeadInfo">
+                        <p class="head_carnum">粤B 0125E</p><em class="modifyCarsInfo"></em>
+                        <p class="head_registrationdate">注册日期：2020年3月30日</p>
+                    </span><span class="changeCar"></span>
+                </div>
+                <div class="alredyContent">
+                    <div class="handleCity"><span id="demo1" class="chooseCity">办理城市：深圳市</span><span
+                            class="freeOnline">免上线</span>
+                    </div>
+                    <div class="dateTitle">距离2020年04月30日年检截止日期剩</div>
+                    <div class="alreadyDate">
+                        <span>3</span><span>0</span><em>天</em>
+                    </div>
+                    <a class="immediatelyHandle" href="">立即办理</a>
+                    <span class="alreadyHandle">我已办理</span>
+                </div>
+            </div>
+            <div class="insMenu ">
+                <a href="./myCoupons.html" class="insMenu-coupons">我的优惠券</a>
+                <span class="insMenu-line"></span>
+                <a href="" class="insMenu-orders">我的订单</a>
+            </div>
+            <div class="insContent ">
+                <div class="insType clearfix">
+                    <div class="typeOne row"><span>6年免检</span></div>
+                    <div class="typeTwo row"><span>接车代办</span></div>
+                    <div class="typeThree row"><span>师傅代办</span></div>
+                    <div class="cur"></div>
+                </div>
+                <div class="explainContentPic"></div>
+
+            </div>
+        </div>
+        <div class="chooseAnotherCar chooseCarHide thisHide">
+            <h2>请选择车辆<em class="cancelChooseCar">取消</em></h2>
+            <div class="mescroll" id="mescroll">
+                <ul class="allCars" id="allCars">
+                    <!-- <li class="cars">
+                        <p>粤BR238H<em>5座</em></p>
+                        <p>注册日期：2020-03-07</p>
+                        <span class="carsChoose"></span>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="chooseNewCar">新增车辆</div>
+        </div>
+        <div class="alreadyHandleRemind remindHide thisHide">
+            <div class="leftCancleBtn"></div>
+            <div class="rightConfirmBtn"></div>
+        </div>
+        <div class="grayBg remindHide chooseCarHide thisHide"></div>
+        <script src="./static/js/rem.js"></script>
+        <script src="./static/js/jquery-1.9.1.js"></script>
+        <script src="./static/js/common.js"></script>
+        <script src="./static/js/LAreaData1.js"></script>
+        <script src="./static/js/LAreaData2.js"></script>
+        <script src="./static/js/LArea.js"></script>
+        <script type="text/javascript"
+            src="https://webapi.amap.com/maps?v=1.4.15&key=68034e8a8aad2873b85026e9d51315a2&plugin=AMap.CitySearch"></script>
+        <script>
+            $(function () {
+
+                $('.modifyCarsInfo').on('click', function () {
+                    window.location.href = "./editCar.html?status=1"
+                })
+
+                var area1 = new LArea();
+                area1.init({
+                    'trigger': '#demo1', //触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+                    'valueTo': '#value1', //选择完毕后id属性输出到该位置
+                    'keys': {
+                        id: 'id',
+                        name: 'name'
+                    }, //绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+                    'type': 1, //数据源类型
+                    'data': LAreaData //数据源
+                });
+                area1.value = [1, 13, 4];//控制初始位置，注意：该方法并不会影响到input的value
+
+                function setListData(listData) {
+                    var listDom = document.getElementById("allCars");
+                    for (var i = 0; i < listData.length; i++) {
+                        var str = `
+                    <p>` + listData[i].carNum + `<em>` + listData[i].seatsNum + `</em></p>
+                    <p>` + listData[i].registeredTime + `</p>
+                    <span class="carsChoose"></span>
+                    `;
+                        var strOne = ``;
+                        var liDom = document.createElement("li");
+                        liDom.className = 'cars clearfix'
+                        liDom.innerHTML = str;
+                        listDom.appendChild(liDom);
+                    }
+                }
+
+                $.ajax({
+                    type: 'GET',
+                    url: './static/json/chooseCar.json',
+                    dataType: 'json',
+                    success: function (data) {
+                        var listData = [];
+                        for (var i = 0; i < data.length; i++) {
+                            listData.push(data[i]);
+                        }
+                        setListData(listData);
+                        $('.changeCar').on('click', function () {
+                            $('.chooseCarHide').removeClass('thisHide');
+                        }) 
+                        $('.cancelChooseCar').on('click', function () {
+                            $('.chooseCarHide').addClass('thisHide');
+                        })
+                        $('.chooseNewCar').on('click', function () {
+                            window.location.href = './editCar.html'
+                        })
+                        $('.cars').on('click', function () {
+                            $('.carsChecked').removeClass('carsChecked');
+                            $(this).find('.carsChoose').addClass('carsChecked');
+                            var month = $('.carsChecked').prevAll().eq(0).text()[11];
+                            var days = $('.carsChecked').prevAll().eq(0).text().substring(13, 15);
+                            var deadline = (4 - month) * 30 + 30 - days;
+                            console.log(deadline.toString()[0])
+                            if (month <= 4 && days < 31) {
+                                $('.dateTitle').text('距离2020年04月30日年检截止日期剩');
+                                $('.alreadyDate span').eq(0).text(deadline.toString()[0]);
+                                $('.alreadyDate span').eq(1).text(deadline.toString()[1]);
+                            } else {
+                                $('.dateTitle').text('距离2020年04月30日年检已逾期');
+                                deadline = Math.abs(deadline);
+                                $('.alreadyDate span').eq(0).text(0);
+                                $('.alreadyDate span').eq(1).text(deadline.toString()[0]);
+                            }
+                            $('.head_registrationdate').text($('.carsChecked').prevAll().eq(0).text());
+                            $('.head_carnum').text($('.carsChecked').prevAll().eq(1).text().substring(0, 8));
+                            $('.chooseCarHide').addClass('thisHide');
+                        })
+                    }
+                });
+
+
+                $('.alreadyHandle').on('click', function () {
+                    $('.remindHide').removeClass('thisHide');
+                });
+                $('.leftCancleBtn').on('click', function () {
+                    $('.remindHide').addClass('thisHide');
+                });
+                $('.rightConfirmBtn').on('click', function () {
+                    $('.remindHide').addClass('thisHide');
+                });
+                $('.insMenu-orders').on('click', function () {
+                    if ($('.cur').hasClass('cur2')) {
+                        $(this).prop('href', './visitOrder.html');
+                    } else if ($('.cur').hasClass('cur3')) {
+                        $(this).prop('href', './stationOrder.html');
+                    } else {
+                        $(this).prop('href', './exemptOrder.html');
+                    }
+                });
+                $('.immediatelyHandle').on('click', function () {
+                    if ($('.cur').hasClass('cur2')) {
+                        $('.immediatelyHandle').prop('href', './confirmOrder.html?status=2');
+                    } else if ($('.cur').hasClass('cur3')) {
+                        $('.immediatelyHandle').prop('href', './confirmOrder.html?status=3');
+                    } else {
+                        $('.immediatelyHandle').prop('href', './confirmOrder.html?status=1');
+                    }
+                });
+                var status = getUrlParam('status');
+                if (status == 1) {
+                    $('.addCar').addClass('thisHide');
+                    $('.alreadyAddCar').removeClass('thisHide');
+                };
+                $('.insType div').on('click', function () {
+                    if ($(this).hasClass('typeOne')) {
+                        $('.cur').removeClass('cur3').removeClass('cur2');
+                        $('.explainContentPic').css('background', 'url("./static/img/home_img_1@2x.png") no-repeat center').css('backgroundSize', '100% 100%')
+                    } else if ($(this).hasClass('typeTwo')) {
+                        $('.cur').addClass('cur2').removeClass('cur3')
+                        $('.explainContentPic').css('background', 'url("./static/img/home_img_2@2x.png") no-repeat center').css('backgroundSize', '100% 100%')
+                    } else if ($(this).hasClass('typeThree')) {
+                        $('.cur').addClass('cur3').removeClass('cur2')
+                        $('.explainContentPic').css('background', 'url("./static/img/home_img_3@2x.png") no-repeat center').css('backgroundSize', '100% 100%')
+                    }
+                });
+                //获取用户所在城市信息
+                function showCityInfo() {
+                    localCity = decodeURIComponent(window.location.search.substr(1)).replace(/[^\u4e00-\u9fa5|]+/, '')
+                    //实例化城市查询类
+                    var citysearch = new AMap.CitySearch();
+                    //自动获取用户IP，返回当前城市
+                    citysearch.getLocalCity(function (status, result) {
+                        if (status === 'complete' && result.info === 'OK') {
+                            if (result && result.city && result.bounds) {
+                                var cityinfo = result.city;
+                                var citybounds = result.bounds;
+                                if (!localCity) {
+                                    $('.chooseCity').text('办理城市:' + cityinfo);
+                                } else {
+                                    $('.chooseCity').text('办理城市:' + localCity);
+                                }
+                                //地图显示当前城市
+                                // map.setBounds(citybounds);
+                            }
+                        } else {
+                            $('.chooseCity').text('办理城市:' + cityinfo);
+                        }
+                    });
+                }
+                showCityInfo();
+            });
+        </script>
+
+</body>
+
+</html>
